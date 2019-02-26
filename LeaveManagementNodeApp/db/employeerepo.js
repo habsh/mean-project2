@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
+const config = require('../config/config');
 
-
-mongoose.connect('mongodb://localhost:27017/employee');
+mongoose.connect(global.gConfig.database);
 const Schema = mongoose.Schema;
 const employeeSchema = new Schema({
     EMP_ID: {

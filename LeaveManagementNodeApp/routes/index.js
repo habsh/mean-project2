@@ -2,6 +2,16 @@ var express = require('express')
 var app = express()
 var employeeRepo = require('../db/employeerepo')
 
+// environment variables
+process.env.NODE_ENV = 'development';
+
+// uncomment below line to test this code against staging environment
+// process.env.NODE_ENV = 'staging';
+
+// config variables
+const config = require('../config/config');
+
+
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
@@ -34,4 +44,6 @@ console.log(req.params.id);
     
 })
 
-app.listen(3000,()=>{console.log("Listening on port 3000")})
+app.listen(global.gConfig.node_port, () => {
+    console.log(`${global.gConfig.app_name} listening on port ${global.gConfig.node_port}`);
+});
