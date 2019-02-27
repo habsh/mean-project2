@@ -1,0 +1,40 @@
+<h1>{{title}} </h1>
+
+<table class="table table-borderless  ">
+
+  <thead>
+    <tr style="background-color:blue">
+      <th> Leave ID </th>
+      <th> Number of days </th>
+      <th> Start Date </th>
+      <th> End Date </th>
+      <th> Leave Type </th>
+      <th> Status </th>
+      <th> Reason </th>
+      <th> Applied On </th>
+      <th> Manager Comments </th>
+    </tr>
+ </thead> 
+   
+  <tbody>  
+    <tr style="background-color:lightblue"> 
+      <td>{{leavehistory?.LEAVE_ID}}</td>
+      
+      <td>{{leavehistory?.NUMBER_OF_DAYS}}</td>
+      
+      <td>{{leavehistory?.START_DATE}}</td>
+      
+      <td>{{leavehistory?.END_DATE}}</td>
+    
+      <td>{{leavehistory?.LEAVE_TYPE}}</td>
+     
+      <td>{{leavehistory?.LEAVE_STATUS}}</td>
+     
+      <td>{{leavehistory?.REASONS}}</td>
+     
+      <td>{{leavehistory?.APPLIED_ON}}</td>
+      
+      <td>{{leavehistory?.MANAGER_COMMENTS}}</td> 
+    </tr>
+  </tbody>
+</table>
